@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background-color: #0f0f0f;
+    color: #e6e6e6;
+}
+
+header {
+    background: #1a1a1a;
+    padding: 20px;
+    border-bottom: 2px solid #8b0000;
+}
+
+header h1 {
+    margin: 0;
+    color: #c9aa71;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background: #141414;
+    padding: 10px;
+    border-right: 2px solid #333;
+}
+
+.sidebar button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    background: #222;
+    color: #ddd;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+.sidebar button:hover {
+    background: #8b0000;
+}
+
+main {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+h2 {
+    color: #c9aa71;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.card {
+    background: #1c1c1c;
+    padding: 15px;
+    border-left: 4px solid #8b0000;
+    margin-bottom: 15px;
+}
+
+/* ===== CLASSES — ESTILO PERGAMINHO ===== */
+
+.class-card {
+    background: linear-gradient(
+        180deg,
+        #2a2418 0%,
+        #1f1a12 100%
+    );
+    border: 1px solid #8b6f3d;
+    border-left: 6px solid #8b0000;
+    padding: 20px 25px;
+    margin-bottom: 25px;
+    box-shadow:
+        inset 0 0 30px rgba(0, 0, 0, 0.6),
+        0 5px 15px rgba(0, 0, 0, 0.7);
+    position: relative;
+}
+
+/* textura visual do pergaminho */
+.class-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: 
+        radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(transparent 95%, rgba(0,0,0,0.15));
+    background-size: 6px 6px, 100% 28px;
+    pointer-events: none;
+    opacity: 0.35;
+}
+
+.class-card h3 {
+    margin-top: 0;
+    font-family: 'Georgia', serif;
+    font-size: 1.6rem;
+    color: #d6b77c;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #8b6f3d;
+    padding-bottom: 6px;
+}
+
+.class-card p {
+    line-height: 1.6;
+    color: #e2dbc7;
+    text-shadow: 0 1px 1px #000;
+}
+
+.class-card strong {
+    color: #c9aa71;
+}
+
+/* separação elegante entre classes */
+.class-card + .class-card {
+    margin-top: 35px;
+}
+
+/* efeito hover sutil (wiki viva) */
+.class-card:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease;
+    box-shadow:
+        inset 0 0 30px rgba(0, 0, 0, 0.6),
+        0 8px 20px rgba(0, 0, 0, 0.9);
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>The Fallen Throne RPG</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>The Fallen Throne RPG</h1>
+    <p>Wiki oficial do RPG ambientado em Game of Thrones</p>
+</header>
+
+<div class="container">
+    <nav class="sidebar">
+        <button onclick="loadSection('world')">🌍 O Mundo</button>
+        <button onclick="loadSection('regions')">🗺️ Regiões</button>
+        <button onclick="loadSection('classes')">⚔️ Classes</button>
+        <button onclick="loadSection('systems')">📜 Sistemas</button>
+        <button onclick="loadSection('market')">💰 Mercado</button>
+        <button onclick="loadSection('organizations')">🏛️ Organizações</button>
+        <button onclick="loadSection('events')">🔥 Eventos</button>
+        <button onclick="loadSection('houses')">🦁 Casas de Westeros</button>
+        <button onclick="loadSection('npcs')">👑 NPCs</button>
+    </nav>
+
+    <main id="content">
+        <h2>Bem-vindo ao The Fallen Throne RPG</h2>
+        <p>Escolha uma aba ao lado para consultar informações do mundo.</p>
+    </main>
+</div>
+
+<script src="js/script.js"></script>
+<script src="data/world.js"></script>
+<script src="data/regions.js"></script>
+<script src="data/classes.js"></script>
+<script src="data/systems.js"></script>
+<script src="data/houses.js"></script>
+<script src="data/npcs.js"></script>
+<script src="data/market.js"></script>
+
+</body>
+</html>
