@@ -13,6 +13,8 @@
 </header>
 
 <div class="container">
+
+    <!-- SIDEBAR -->
     <nav class="sidebar">
         <button onclick="loadSection('world')">🌍 O Mundo</button>
         <button onclick="loadSection('regions')">🗺️ Regiões</button>
@@ -25,12 +27,175 @@
         <button onclick="loadSection('npcs')">👑 NPCs</button>
     </nav>
 
+    <!-- CONTEÚDO PRINCIPAL -->
     <main id="content">
         <h2>Bem-vindo ao The Fallen Throne RPG</h2>
         <p>Escolha uma aba ao lado para consultar informações do mundo.</p>
     </main>
+
 </div>
 
+<!-- TEMPLATE DA ABA CASAS (carregada via JS) -->
+<template id="houses-template">
+
+    <h2>Casas de Westeros</h2>
+
+    <nav class="houses-menu">
+        <button onclick="showHouses('grandes')">Grandes Casas</button>
+        <button onclick="showHouses('menores')">Casas Menores</button>
+        <button onclick="showHouses('extintas')">Casas Extintas</button>
+    </nav>
+
+    <!-- GRANDES CASAS -->
+    <section id="grandes" class="houses-section">
+
+        <div class="house-card house-stark">
+            <div class="house-header">
+                <div class="house-sigil">🐺</div>
+                <div>
+                    <h2 class="house-title">Casa Stark</h2>
+                    <div class="house-motto">“O Inverno Está Chegando”</div>
+                </div>
+            </div>
+            <div class="house-info">
+                <p><strong>Região:</strong> O Norte</p>
+                <p><strong>Sede:</strong> Winterfell</p>
+                <p><strong>Especialidade:</strong> Honra e resistência</p>
+            </div>
+        </div>
+
+        <div class="house-card house-lannister">
+            <div class="house-header">
+                <div class="house-sigil">🦁</div>
+                <div>
+                    <h2 class="house-title">Casa Lannister</h2>
+                    <div class="house-motto">“Ouça-me Rugir”</div>
+                </div>
+            </div>
+            <div class="house-info">
+                <p><strong>Região:</strong> Terras Ocidentais</p>
+                <p><strong>Sede:</strong> Rochedo Casterly</p>
+            </div>
+        </div>
+
+        <div class="house-card house-targaryen">
+            <div class="house-header">
+                <div class="house-sigil">🐉</div>
+                <div>
+                    <h2 class="house-title">Casa Targaryen</h2>
+                    <div class="house-motto">“Fogo e Sangue”</div>
+                </div>
+            </div>
+            <div class="house-info">
+                <p><strong>Status:</strong> Pretendentes ao Trono</p>
+            </div>
+        </div>
+
+        <div class="house-card house-baratheon">
+    <div class="house-header">
+        <div class="house-sigil">🦌</div>
+        <div>
+            <h2 class="house-title">Casa Baratheon</h2>
+            <div class="house-motto">“Nossa é a Fúria”</div>
+        </div>
+    </div>
+
+    <div class="house-info">
+        <p><strong>Região:</strong> Terras da Tempestade</p>
+        <p><strong>Sede:</strong> Ponta da Tempestade</p>
+        <p><strong>Governante:</strong> Senhor da Tempestade</p>
+        <p><strong>Especialidade:</strong> Força militar, legitimidade real</p>
+    </div>
+
+    <div class="house-status">
+        Status Atual: Dividida por disputas internas e pretensões ao Trono.
+    </div>
+</div>
+
+
+        <div class="house-card house-arryn">
+    <div class="house-header">
+        <div class="house-sigil">🦅</div>
+        <div>
+            <h2 class="house-title">Casa Arryn</h2>
+            <div class="house-motto">“Tão Alto Quanto a Honra”</div>
+        </div>
+    </div>
+
+    <div class="house-info">
+        <p><strong>Região:</strong> O Vale</p>
+        <p><strong>Sede:</strong> Ninho da Águia</p>
+        <p><strong>Governante:</strong> Protetor do Vale</p>
+        <p><strong>Especialidade:</strong> Defesa natural, honra rígida</p>
+    </div>
+
+    <div class="house-status">
+        Status Atual: Isolada politicamente, mas quase inexpugnável.
+    </div>
+</div>
+
+        <div class="house-card house-tyrell">
+    <div class="house-header">
+        <div class="house-sigil">🌹</div>
+        <div>
+            <h2 class="house-title">Casa Tyrell</h2>
+            <div class="house-motto">“Crescendo Fortes”</div>
+        </div>
+    </div>
+
+    <div class="house-info">
+        <p><strong>Região:</strong> A Campina</p>
+        <p><strong>Sede:</strong> Jardim de Cima</p>
+        <p><strong>Governante:</strong> Senhor da Campina</p>
+        <p><strong>Especialidade:</strong> Diplomacia, abundância, alianças</p>
+    </div>
+
+    <div class="house-status">
+        Status Atual: Extremamente poderosa, sustentando guerras com comida e ouro.
+    </div>
+</div>
+
+        <div class="house-card house-martell">
+    <div class="house-header">
+        <div class="house-sigil">☀️</div>
+        <div>
+            <h2 class="house-title">Casa Martell</h2>
+            <div class="house-motto">“Insubmissos, Não Curvados, Não Quebrados”</div>
+        </div>
+    </div>
+
+    <div class="house-info">
+        <p><strong>Região:</strong> Dorne</p>
+        <p><strong>Sede:</strong> Lançassolar</p>
+        <p><strong>Governante:</strong> Príncipe de Dorne</p>
+        <p><strong>Especialidade:</strong> Resistência cultural, vingança paciente</p>
+    </div>
+
+    <div class="house-status">
+        Status Atual: Estável, independente e distante do jogo do Trono.
+    </div>
+</div>
+
+
+    </section>
+
+    <!-- CASAS MENORES -->
+    <section id="menores" class="houses-section hidden">
+        <p>Casas menores serão listadas aqui.</p>
+    </section>
+
+    <!-- CASAS EXTINTAS -->
+    <section id="extintas" class="houses-section hidden">
+        <ul>
+            <li>Casa Blackfyre</li>
+            <li>Casa Frey</li>
+            <li>Casa Greyjoy</li>
+        </ul>
+    </section>
+
+</template>
+
+<!-- JS -->
 <script src="js/script.js"></script>
 <script src="data/world.js"></script>
 <script src="data/regions.js"></script>
@@ -39,6 +204,17 @@
 <script src="data/houses.js"></script>
 <script src="data/npcs.js"></script>
 <script src="data/market.js"></script>
+
+<!-- JS DAS CASAS -->
+<script>
+function showHouses(type) {
+    document.querySelectorAll('.houses-section')
+        .forEach(sec => sec.classList.add('hidden'));
+
+    const target = document.getElementById(type);
+    if (target) target.classList.remove('hidden');
+}
+</script>
 
 </body>
 </html>
