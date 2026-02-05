@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>The Fallen Throne RPG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     <h1>The Fallen Throne RPG</h1>
     <p>Wiki oficial do RPG ambientado em Game of Thrones</p>
 </header>
@@ -27,7 +29,7 @@
         <button onclick="loadSection('npcs')">👑 NPCs</button>
     </nav>
 
-    <!-- CONTEÚDO PRINCIPAL -->
+    <!-- CONTEÚDO DINÂMICO -->
     <main id="content">
         <h2>Bem-vindo ao The Fallen Throne RPG</h2>
         <p>Escolha uma aba ao lado para consultar informações do mundo.</p>
@@ -35,148 +37,84 @@
 
 </div>
 
-<!-- TEMPLATE DA ABA CASAS (carregada via JS) -->
+<!-- =========================
+     TEMPLATE CASAS DE WESTEROS
+========================= -->
 <template id="houses-template">
 
-    <h2>Casas de Westeros</h2>
+<section id="casas-westeros">
 
-    <nav class="houses-menu">
+    <div class="houses-banner">
+        <h2>Casas de Westeros</h2>
+    </div>
+
+    <!-- MENU INTERNO -->
+    <div class="houses-menu">
         <button onclick="showHouses('grandes')">Grandes Casas</button>
         <button onclick="showHouses('menores')">Casas Menores</button>
         <button onclick="showHouses('extintas')">Casas Extintas</button>
-    </nav>
+    </div>
 
     <!-- GRANDES CASAS -->
     <section id="grandes" class="houses-section">
 
-        <div class="house-card house-stark">
-            <div class="house-header">
-                <div class="house-sigil">🐺</div>
-                <div>
-                    <h2 class="house-title">Casa Stark</h2>
-                    <div class="house-motto">“O Inverno Está Chegando”</div>
+        <div class="houses-grid">
+
+            <!-- STARK -->
+            <div class="house-card">
+                <div class="house-banner" style="background-image:url('https://wallpapers.com/images/hd/minimal-house-stark-sigil-banner-g8ncd2ql18y1iv01.jpg')"></div>
+                <div class="house-content">
+                    <div class="house-header">
+                        <img src="https://static.wikia.nocookie.net/gameofthrones/images/5/5a/Casa-Stark-escudo.png/revision/latest?cb=20230216112818&path-prefix=pt-br">
+                        <h3>Casa Stark</h3>
+                    </div>
+                    <p><strong>Lema:</strong> O Inverno Está Chegando</p>
+                    <p><strong>Sede:</strong> Winterfell</p>
+                    <p><strong>Região:</strong> O Norte</p>
+
+                    <button class="house-button" onclick="openHouse('stark')">
+                    Ver História
+                    </button>
+
                 </div>
             </div>
-            <div class="house-info">
-                <p><strong>Região:</strong> O Norte</p>
-                <p><strong>Sede:</strong> Winterfell</p>
-                <p><strong>Especialidade:</strong> Honra e resistência</p>
-            </div>
-        </div>
 
-        <div class="house-card house-lannister">
-            <div class="house-header">
-                <div class="house-sigil">🦁</div>
-                <div>
-                    <h2 class="house-title">Casa Lannister</h2>
-                    <div class="house-motto">“Ouça-me Rugir”</div>
+            <!-- LANNISTER -->
+            <div class="house-card">
+                <div class="house-banner" style="background-image:url('https://64.media.tumblr.com/f849903c9dfc20bb771b76f3e5c26e64/tumblr_inline_peg0tit2Gw1r0ewjx_1280.png')"></div>
+                <div class="house-content">
+                    <div class="house-header">
+                        <img src="https://static.wikia.nocookie.net/sss/images/0/0a/Lannister.png/revision/latest?cb=20170809220120&path-prefix=pt-br">
+                        <h3>Casa Lannister</h3>
+                    </div>
+                    <p><strong>Lema:</strong> Ouça-me Rugir</p>
+                    <p><strong>Sede:</strong> Rochedo Casterly</p>
+                    <p><strong>Região:</strong> Terras Ocidentais</p>
+
+                    <button class="house-button" onclick="openHouse('lannister')">
+                    Ver História
+                    </button>
                 </div>
             </div>
-            <div class="house-info">
-                <p><strong>Região:</strong> Terras Ocidentais</p>
-                <p><strong>Sede:</strong> Rochedo Casterly</p>
-            </div>
-        </div>
 
-        <div class="house-card house-targaryen">
-            <div class="house-header">
-                <div class="house-sigil">🐉</div>
-                <div>
-                    <h2 class="house-title">Casa Targaryen</h2>
-                    <div class="house-motto">“Fogo e Sangue”</div>
+            <!-- TARGARYEN -->
+            <div class="house-card">
+                <div class="house-banner" style="background-image:url('https://i.imgur.com/2bMZ4hz.jpg')"></div>
+                <div class="house-content">
+                    <div class="house-header">
+                        <img src="https://i.imgur.com/rXy6sZ6.png">
+                        <h3>Casa Targaryen</h3>
+                    </div>
+                    <p><strong>Lema:</strong> Fogo e Sangue</p>
+                    <p><strong>Sede:</strong> Dragonstone</p>
+
+                    <button class="house-button" onclick="openHouse('targaryen')">
+                    Ver História
+                    </button>
                 </div>
             </div>
-            <div class="house-info">
-                <p><strong>Status:</strong> Pretendentes ao Trono</p>
-            </div>
+
         </div>
-
-        <div class="house-card house-baratheon">
-    <div class="house-header">
-        <div class="house-sigil">🦌</div>
-        <div>
-            <h2 class="house-title">Casa Baratheon</h2>
-            <div class="house-motto">“Nossa é a Fúria”</div>
-        </div>
-    </div>
-
-    <div class="house-info">
-        <p><strong>Região:</strong> Terras da Tempestade</p>
-        <p><strong>Sede:</strong> Ponta da Tempestade</p>
-        <p><strong>Governante:</strong> Senhor da Tempestade</p>
-        <p><strong>Especialidade:</strong> Força militar, legitimidade real</p>
-    </div>
-
-    <div class="house-status">
-        Status Atual: Dividida por disputas internas e pretensões ao Trono.
-    </div>
-</div>
-
-
-        <div class="house-card house-arryn">
-    <div class="house-header">
-        <div class="house-sigil">🦅</div>
-        <div>
-            <h2 class="house-title">Casa Arryn</h2>
-            <div class="house-motto">“Tão Alto Quanto a Honra”</div>
-        </div>
-    </div>
-
-    <div class="house-info">
-        <p><strong>Região:</strong> O Vale</p>
-        <p><strong>Sede:</strong> Ninho da Águia</p>
-        <p><strong>Governante:</strong> Protetor do Vale</p>
-        <p><strong>Especialidade:</strong> Defesa natural, honra rígida</p>
-    </div>
-
-    <div class="house-status">
-        Status Atual: Isolada politicamente, mas quase inexpugnável.
-    </div>
-</div>
-
-        <div class="house-card house-tyrell">
-    <div class="house-header">
-        <div class="house-sigil">🌹</div>
-        <div>
-            <h2 class="house-title">Casa Tyrell</h2>
-            <div class="house-motto">“Crescendo Fortes”</div>
-        </div>
-    </div>
-
-    <div class="house-info">
-        <p><strong>Região:</strong> A Campina</p>
-        <p><strong>Sede:</strong> Jardim de Cima</p>
-        <p><strong>Governante:</strong> Senhor da Campina</p>
-        <p><strong>Especialidade:</strong> Diplomacia, abundância, alianças</p>
-    </div>
-
-    <div class="house-status">
-        Status Atual: Extremamente poderosa, sustentando guerras com comida e ouro.
-    </div>
-</div>
-
-        <div class="house-card house-martell">
-    <div class="house-header">
-        <div class="house-sigil">☀️</div>
-        <div>
-            <h2 class="house-title">Casa Martell</h2>
-            <div class="house-motto">“Insubmissos, Não Curvados, Não Quebrados”</div>
-        </div>
-    </div>
-
-    <div class="house-info">
-        <p><strong>Região:</strong> Dorne</p>
-        <p><strong>Sede:</strong> Lançassolar</p>
-        <p><strong>Governante:</strong> Príncipe de Dorne</p>
-        <p><strong>Especialidade:</strong> Resistência cultural, vingança paciente</p>
-    </div>
-
-    <div class="house-status">
-        Status Atual: Estável, independente e distante do jogo do Trono.
-    </div>
-</div>
-
-
     </section>
 
     <!-- CASAS MENORES -->
@@ -189,10 +127,10 @@
         <ul>
             <li>Casa Blackfyre</li>
             <li>Casa Frey</li>
-            <li>Casa Greyjoy</li>
         </ul>
     </section>
 
+</section>
 </template>
 
 <!-- JS -->
@@ -202,19 +140,9 @@
 <script src="data/classes.js"></script>
 <script src="data/systems.js"></script>
 <script src="data/houses.js"></script>
+<script src="data/housePages.js"></script>
 <script src="data/npcs.js"></script>
 <script src="data/market.js"></script>
-
-<!-- JS DAS CASAS -->
-<script>
-function showHouses(type) {
-    document.querySelectorAll('.houses-section')
-        .forEach(sec => sec.classList.add('hidden'));
-
-    const target = document.getElementById(type);
-    if (target) target.classList.remove('hidden');
-}
-</script>
 
 </body>
 </html>

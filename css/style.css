@@ -387,3 +387,237 @@ html {
 .hidden {
     display: none;
 }
+
+/* ===== CASAS DE WESTEROS — VISUAL ===== */
+
+.houses-banner {
+    position: relative;
+    height: 260px;
+    background-image: url("https://i.imgur.com/1Kk6G7v.jpg"); /* mapa Westeros */
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.houses-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.houses-banner h2 {
+    position: absolute;
+    bottom: 25px;
+    left: 30px;
+    z-index: 2;
+    font-size: 2.4rem;
+    letter-spacing: 2px;
+    color: #f5f0e6;
+}
+
+/* ===== CARD DE CASA ===== */
+
+.house-card {
+    background: #111;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease;
+}
+
+.house-card:hover {
+    transform: scale(1.02);
+}
+
+.house-banner {
+    position: relative;
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+}
+
+.house-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+.house-content {
+    padding: 20px;
+}
+
+.house-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.house-header img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 6px black);
+}
+
+.house-header h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+.house-hero {
+    height: 320px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.house-hero .overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 30px;
+    color: #fff;
+}
+
+.house-hero img {
+    width: 80px;
+}
+
+.house-page-content {
+    padding: 30px;
+}
+
+.house-button,
+.back-button {
+    margin-top: 15px;
+    padding: 10px 16px;
+    background: #7a5c2e;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-family: serif;
+}
+
+.house-button:hover,
+.back-button:hover {
+    background: #a37c40;
+}
+
+.menu-toggle {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 26px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* ==========================
+   RESPONSIVO — MOBILE
+========================== */
+@media (max-width: 900px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 260px;
+        height: 100vh;
+        background: #111;
+        padding-top: 80px;
+        transition: left 0.3s ease;
+        z-index: 999;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .sidebar button {
+        width: 100%;
+        text-align: left;
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+
+    main#content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .houses-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .house-card {
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .house-banner {
+        height: 140px;
+    }
+
+    .house-header {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .house-header img {
+        width: 48px;
+    }
+
+    .house-content p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .house-button {
+        width: 100%;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .house-hero {
+        height: 220px;
+    }
+
+    .house-hero h1 {
+        font-size: 26px;
+    }
+
+    .house-page-content {
+        padding: 20px 15px;
+    }
+
+    .house-page-content .card {
+        margin-bottom: 20px;
+    }
+}

@@ -44,6 +44,11 @@ function loadSection(section) {
     }
 }
 
+function toggleMenu() {
+    document.querySelector('.sidebar').classList.toggle('open');
+}
+
+
 /* ============================
    CASAS DE WESTEROS
 ============================ */
@@ -67,4 +72,15 @@ function showHouses(type) {
 
     const target = document.getElementById(type);
     if (target) target.classList.remove("hidden");
+}
+
+function openHouse(house) {
+    const content = document.getElementById("content");
+
+    if (housePages[house]) {
+        content.innerHTML = housePages[house];
+        window.scrollTo(0, 0);
+    } else {
+        content.innerHTML = "<p>Casa não encontrada.</p>";
+    }
 }
