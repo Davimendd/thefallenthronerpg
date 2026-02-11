@@ -1,520 +1,61 @@
 /* ===============================
    THE FALLEN THRONE RPG
-   Identidade Visual Oficial
+   Identidade Visual Premium
    =============================== */
 
-/* ===== RESET BÁSICO ===== */
+/* ===== VARIÁVEIS ===== */
+:root {
+    --bg-main: #0e0e0e;
+    --bg-card: #161616;
+    --bg-card-hover: #1f1f1f;
+
+    --text-main: #eaeaea;
+    --text-muted: #b5b5b5;
+
+    --accent-gold: #c7a44a;
+    --accent-red: #7a1f1f;
+    --accent-blue: #2f4f6f;
+
+    --border-soft: rgba(255,255,255,0.08);
+}
+
+/* ===== RESET ===== */
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    font-family: "Georgia", serif;
-    background-color: #0f0f0f;
-    color: #e2dbc7;
+    font-family: 'Merriweather', serif;
+    background: var(--bg-main);
+    color: var(--text-main);
 }
 
 /* ===== HEADER ===== */
 header {
-    background: radial-gradient(circle at top, #2a1f12 0%, #0f0f0f 70%);
+    background: radial-gradient(circle at top, #2a1f12 0%, #0e0e0e 70%);
     padding: 30px 20px;
     text-align: center;
-    border-bottom: 3px solid #8b0000;
+    border-bottom: 1px solid var(--border-soft);
+    position: relative;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 3rem;
-    color: #c9aa71;
+    font-family: 'Cinzel', serif;
     letter-spacing: 2px;
-}
-
-header em {
-    display: block;
-    margin-top: 8px;
-    color: #b89b63;
-    font-style: italic;
-    opacity: 0.9;
-}
-
-/* ===== LAYOUT ===== */
-.container {
-    display: flex;
-    min-height: calc(100vh - 120px);
-}
-
-/* ===== SIDEBAR ===== */
-.sidebar {
-    width: 260px;
-    background: linear-gradient(180deg, #141414, #0b0b0b);
-    padding: 15px;
-    border-right: 2px solid #2a2a2a;
-}
-
-.sidebar button {
-    width: 100%;
-    background: transparent;
-    color: #d6caa5;
-    border: none;
-    padding: 12px 10px;
-    margin-bottom: 6px;
-    text-align: left;
-    font-size: 1rem;
-    cursor: pointer;
-    border-left: 4px solid transparent;
-    transition: all 0.2s ease;
-}
-
-.sidebar button:hover {
-    background: rgba(139, 0, 0, 0.15);
-    border-left: 4px solid #8b0000;
-    color: #fff;
-}
-
-.sidebar button.active {
-    background: rgba(139, 0, 0, 0.35);
-    border-left: 4px solid #c9aa71;
-    color: #fff;
-}
-
-/* ===== CONTEÚDO ===== */
-main {
-    flex-grow: 1;
-    padding: 30px 40px;
-}
-
-h2 {
-    font-size: 2.2rem;
-    color: #c9aa71;
-    margin-top: 0;
-    border-bottom: 1px solid #8b6f3d;
-    padding-bottom: 8px;
-}
-
-h3 {
-    color: #d6b77c;
-}
-
-/* ===== CARDS DE PERGAMINHO ===== */
-.card,
-.class-card {
-    background: linear-gradient(180deg, #2a2418 0%, #1f1a12 100%);
-    border: 1px solid #8b6f3d;
-    border-left: 6px solid #8b0000;
-    padding: 22px 26px;
-    margin-bottom: 25px;
-    position: relative;
-    box-shadow:
-        inset 0 0 30px rgba(0, 0, 0, 0.6),
-        0 6px 18px rgba(0, 0, 0, 0.7);
-}
-
-/* textura de pergaminho */
-.card::before,
-.class-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image:
-        radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-        linear-gradient(transparent 96%, rgba(0,0,0,0.15));
-    background-size: 6px 6px, 100% 28px;
-    pointer-events: none;
-    opacity: 0.35;
-}
-
-.card p,
-.class-card p {
-    line-height: 1.6;
-    text-shadow: 0 1px 1px #000;
-}
-
-/* ===== LISTAS ===== */
-ul {
-    padding-left: 20px;
-}
-
-li {
-    margin-bottom: 6px;
-}
-
-/* ===== DESTAQUES ===== */
-strong {
-    color: #c9aa71;
-}
-
-em {
-    color: #bfa76a;
-}
-
-/* ===== CAIXAS ESPECIAIS ===== */
-.lore-warning {
-    background: #1a0f0f;
-    border-left: 4px solid #8b0000;
-    padding: 12px 15px;
-    font-style: italic;
-    color: #e6cfcf;
-    margin: 20px 0;
-}
-
-.lore-note {
-    background: #141414;
-    border-left: 4px solid #8b6f3d;
-    padding: 12px 15px;
-    font-style: italic;
-    color: #d6caa5;
-}
-
-/* ===== DIVISOR ELEGANTE ===== */
-.divider {
-    height: 1px;
-    background: linear-gradient(
-        to right,
-        transparent,
-        #8b6f3d,
-        transparent
-    );
-    margin: 35px 0;
-}
-
-/* ===== INTERAÇÃO ===== */
-.card:hover,
-.class-card:hover {
-    transform: translateY(-2px);
-    transition: transform 0.2s ease;
-    box-shadow:
-        inset 0 0 30px rgba(0, 0, 0, 0.6),
-        0 10px 24px rgba(0, 0, 0, 0.9);
-}
-
-/* ===== SCROLL ===== */
-html {
-    scroll-behavior: smooth;
-}
-
-/* ===== RESPONSIVO ===== */
-@media (max-width: 900px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        width: 100%;
-        border-right: none;
-        border-bottom: 2px solid #2a2a2a;
-    }
-
-    main {
-        padding: 25px;
-    }
-}
-
-/* ===============================
-   CASAS NOBRES
-   =============================== */
-
-.house-card {
-    background: linear-gradient(180deg, #2b2417, #1d180f);
-    border: 2px solid #8b6f3d;
-    border-left: 8px solid #8b0000;
-    padding: 26px 30px;
-    margin-bottom: 35px;
-    position: relative;
-    box-shadow:
-        inset 0 0 35px rgba(0, 0, 0, 0.6),
-        0 12px 28px rgba(0, 0, 0, 0.8);
-}
-
-/* textura heráldica */
-.house-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image:
-        radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
-    background-size: 7px 7px;
-    opacity: 0.4;
-    pointer-events: none;
-}
-
-.house-header {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    border-bottom: 1px solid #8b6f3d;
-    padding-bottom: 12px;
-    margin-bottom: 18px;
-}
-
-.house-sigil {
-    width: 90px;
-    height: 90px;
-    background: #111;
-    border: 2px solid #8b6f3d;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.5rem;
-    color: #c9aa71;
-}
-
-.house-title {
-    font-size: 2.2rem;
-    color: #c9aa71;
     margin: 0;
 }
 
-.house-motto {
-    font-style: italic;
-    color: #bfa76a;
-    margin-top: 4px;
+header p {
+    color: var(--text-muted);
 }
 
-/* informações */
-.house-info p {
-    margin: 6px 0;
-}
-
-/* status político */
-.house-status {
-    margin-top: 15px;
-    padding: 10px 14px;
-    border-left: 4px solid;
-    font-style: italic;
-}
-
-/* STARK */
-.house-stark {
-    border-left-color: #7a7a7a;
-}
-.house-stark .house-status {
-    background: #151515;
-    border-color: #7a7a7a;
-}
-
-/* LANNISTER */
-.house-lannister {
-    border-left-color: #8b0000;
-}
-.house-lannister .house-status {
-    background: #1a0f0f;
-    border-color: #8b0000;
-}
-
-/* TARGARYEN */
-.house-targaryen {
-    border-left-color: #3a3a3a;
-}
-.house-targaryen .house-status {
-    background: #100b0b;
-    border-color: #3a3a3a;
-}
-
-/* BARATHEON */
-.house-baratheon {
-    border-left-color: #c9aa71;
-}
-.house-baratheon .house-status {
-    background: #1c1a12;
-    border-color: #c9aa71;
-}
-
-.houses-section {
-    margin-top: 2rem;
-    animation: fadeIn 0.6s ease;
-}
-
-.hidden {
-    display: none;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.houses-menu {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-.houses-menu button {
-    background: #2b1d12;
-    color: #e6d3a3;
-    border: 1px solid #8b6a3e;
-    padding: 0.6rem 1.2rem;
-    font-family: "Cinzel", serif;
-    cursor: pointer;
-}
-
-.houses-menu button:hover {
-    background: #3a2718;
-}
-
-.houses-menu {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-.houses-menu button {
-    background: linear-gradient(180deg, #3a2618, #1f140c);
-    color: #e6d3a3;
-    border: 1px solid #8b6a3e;
-    padding: 0.6rem 1.4rem;
-    font-family: "Cinzel", serif;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.houses-menu button:hover {
-    background: #4a2f1c;
-    transform: translateY(-1px);
-}
-
-.houses-section {
-    animation: fadeIn 0.6s ease;
-}
-
-.hidden {
-    display: none;
-}
-
-/* ===== CASAS DE WESTEROS — VISUAL ===== */
-
-.houses-banner {
-    position: relative;
-    height: 260px;
-    background-image: url("https://i.imgur.com/1Kk6G7v.jpg"); /* mapa Westeros */
-    background-size: cover;
-    background-position: center;
-    border-radius: 16px;
-    margin-bottom: 30px;
-    overflow: hidden;
-}
-
-.houses-banner::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.55);
-}
-
-.houses-banner h2 {
-    position: absolute;
-    bottom: 25px;
-    left: 30px;
-    z-index: 2;
-    font-size: 2.4rem;
-    letter-spacing: 2px;
-    color: #f5f0e6;
-}
-
-/* ===== CARD DE CASA ===== */
-
-.house-card {
-    background: #111;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 0 25px rgba(0,0,0,0.6);
-    transition: transform 0.3s ease;
-}
-
-.house-card:hover {
-    transform: scale(1.02);
-}
-
-.house-banner {
-    position: relative;
-    height: 160px;
-    background-size: cover;
-    background-position: center;
-}
-
-.house-banner::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.55);
-}
-
-.house-content {
-    padding: 20px;
-}
-
-.house-header {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.house-header img {
-    width: 70px;
-    height: 70px;
-    object-fit: contain;
-    filter: drop-shadow(0 0 6px black);
-}
-
-.house-header h3 {
-    margin: 0;
-    font-size: 1.4rem;
-    letter-spacing: 1px;
-}
-
-.house-hero {
-    height: 320px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-.house-hero .overlay {
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    padding: 30px;
-    color: #fff;
-}
-
-.house-hero img {
-    width: 80px;
-}
-
-.house-page-content {
-    padding: 30px;
-}
-
-.house-button,
-.back-button {
-    margin-top: 15px;
-    padding: 10px 16px;
-    background: #7a5c2e;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-family: serif;
-}
-
-.house-button:hover,
-.back-button:hover {
-    background: #a37c40;
-}
-
+/* ===== MENU MOBILE ===== */
 .menu-toggle {
     display: none;
     position: absolute;
     right: 20px;
-    top: 20px;
+    top: 25px;
     font-size: 26px;
     background: none;
     border: none;
@@ -522,14 +63,128 @@ html {
     cursor: pointer;
 }
 
-/* ==========================
-   RESPONSIVO — MOBILE
-========================== */
-@media (max-width: 900px) {
+/* ===== LAYOUT ===== */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
 
-    body {
-        font-size: 16px;
-    }
+.sidebar {
+    width: 260px;
+    background: linear-gradient(180deg, #0b0b0b, #111);
+    border-right: 1px solid var(--border-soft);
+    padding-top: 30px;
+}
+
+.sidebar button {
+    width: 100%;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    padding: 14px 20px;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: 0.2s;
+    text-align: left;
+}
+
+.sidebar button:hover {
+    color: var(--accent-gold);
+    background: rgba(255,255,255,0.04);
+}
+
+main#content {
+    flex: 1;
+    padding: 40px;
+}
+
+/* ===== TEXTO ===== */
+h2, h3 {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 1px;
+}
+
+h2 {
+    border-bottom: 1px solid var(--border-soft);
+    padding-bottom: 8px;
+}
+
+p, li {
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+/* ===== CARDS ===== */
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 30px;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    background: var(--bg-card-hover);
+    transform: translateY(-4px);
+}
+
+/* ===== CASAS ===== */
+.houses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.house-banner {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.house-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+.house-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.house-header img {
+    width: 60px;
+}
+
+.house-header h3 {
+    color: var(--accent-gold);
+}
+
+.house-button {
+    margin-top: 15px;
+    background: var(--accent-gold);
+    color: #111;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.house-button:hover {
+    background: #e0bd5c;
+}
+
+/* ======================
+   RESPONSIVO — MOBILE
+====================== */
+@media (max-width: 900px) {
 
     .menu-toggle {
         display: block;
@@ -543,81 +198,286 @@ html {
         position: fixed;
         top: 0;
         left: -100%;
-        width: 260px;
         height: 100vh;
-        background: #111;
-        padding-top: 80px;
-        transition: left 0.3s ease;
         z-index: 999;
+        transition: left 0.3s ease;
+        padding-top: 80px;
     }
 
     .sidebar.open {
         left: 0;
     }
 
-    .sidebar button {
-        width: 100%;
-        text-align: left;
-        padding: 15px 20px;
-        font-size: 16px;
-    }
-
     main#content {
         padding: 20px;
     }
-}
-
-@media (max-width: 900px) {
 
     .houses-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
     }
 
-    .house-card {
-        border-radius: 12px;
-        overflow: hidden;
-    }
-
-    .house-banner {
-        height: 140px;
-    }
-
-    .house-header {
-        flex-direction: row;
-        gap: 10px;
-    }
-
-    .house-header img {
-        width: 48px;
-    }
-
-    .house-content p {
-        font-size: 14px;
-        line-height: 1.5;
-    }
-
-    .house-button {
-        width: 100%;
-        font-size: 15px;
-    }
+    h2 { font-size: 1.5rem; }
+    p  { font-size: 15px; }
 }
 
+/* ===============================
+   PÁGINA INDIVIDUAL DA CASA
+=============================== */
+
+.house-hero {
+    height: 340px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    background-color: #0b0b0b;
+}
+
+.house-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2), #0e0e0e);
+}
+
+.house-page-content {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.house-intro p {
+    font-size: 17px;
+}
+
+.house-page-content ul {
+    padding-left: 20px;
+}
+
+.house-page-content li {
+    margin-bottom: 8px;
+}
+
+.house-quote blockquote {
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    color: var(--accent-gold);
+    border-left: 4px solid var(--accent-gold);
+    padding-left: 20px;
+    margin: 0;
+}
+
+.house-footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid var(--border-soft);
+}
+
+.house-footer a {
+    color: var(--accent-gold);
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+}
+
+.house-footer a:hover {
+    text-decoration: underline;
+}
+
+/* ===== MOBILE ===== */
 @media (max-width: 900px) {
 
     .house-hero {
         height: 220px;
     }
 
-    .house-hero h1 {
-        font-size: 26px;
-    }
-
     .house-page-content {
         padding: 20px 15px;
     }
 
-    .house-page-content .card {
-        margin-bottom: 20px;
+    .house-quote blockquote {
+        font-size: 16px;
     }
 }
+
+/* ===============================
+   CLASSES — VISUAL PREMIUM
+=============================== */
+
+.classes-intro {
+    max-width: 700px;
+    margin-bottom: 30px;
+}
+
+.classes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.class-card {
+    background: linear-gradient(180deg, #181818, #111);
+    border: 1px solid var(--border-soft);
+    border-radius: 16px;
+    padding: 26px;
+    transition: 0.3s ease;
+}
+
+.class-card:hover {
+    transform: translateY(-6px);
+    background: linear-gradient(180deg, #222, #141414);
+}
+
+.class-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.class-header h3 {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 1px;
+    margin: 0;
+    color: var(--accent-gold);
+}
+
+.class-icon {
+    font-size: 26px;
+}
+
+.class-quote {
+    font-size: 14px;
+    color: var(--text-muted);
+    border-left: 3px solid var(--accent-gold);
+    padding-left: 12px;
+    margin: 15px 0;
+}
+
+.class-bonus {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed var(--border-soft);
+}
+
+.class-bonus strong {
+    color: var(--accent-gold);
+}
+
+.class-bonus ul {
+    padding-left: 18px;
+    margin-top: 10px;
+}
+
+.class-bonus li {
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+    .classes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.market-intro {
+  margin-bottom: 20px;
+  color: #ccc;
+  font-style: italic;
+}
+
+.market-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.market-card {
+  background: linear-gradient(180deg, #1e1e1e, #121212);
+  border: 1px solid #2a2a2a;
+  border-radius: 14px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.market-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.market-card h3 {
+  color: #e6c87a;
+  margin-bottom: 6px;
+}
+
+.market-card p {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin-bottom: 8px;
+}
+
+.market-card .price {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 10px;
+  background: #2b2b2b;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #f5d76e;
+}
+
+.market-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+}
+
+.regions-intro {
+  margin-bottom: 20px;
+  color: #ccc;
+  font-style: italic;
+}
+
+.regions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.region-card {
+  background: linear-gradient(180deg, #1e1e1e, #121212);
+  border: 1px solid #2a2a2a;
+  border-radius: 14px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.region-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.region-card h3 {
+  color: #e6c87a;
+  margin-bottom: 8px;
+}
+
+.region-card p {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+.region-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+}
+
+
+
+
