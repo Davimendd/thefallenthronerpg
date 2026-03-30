@@ -10,7 +10,7 @@ As classes representam papéis sociais, políticos e místicos do mundo de
 
 <section class="class-card">
     <header class="class-header">
-        <h3>Nobreza</h3>
+        <h3>Nobreza (Origem)</h3>
         <span class="class-icon">👑</span>
     </header>
 
@@ -27,7 +27,24 @@ As classes representam papéis sociais, políticos e místicos do mundo de
     </div>
 </section>
 
+<section class="class-card">
+    <header class="class-header">
+        <h3>Plebeu (Origem)</h3>
+        <span class="class-icon">🍞</span>
+    </header>
 
+    <p class="class-quote"><em>Você é só mais um tentando sobreviver.</em></p>
+
+    <p><strong>Estilos:</strong> Ligeiro (Agilidade), Potente (Força)</p>
+
+    <div class="class-bonus">
+        <strong>Bônus — Trabalhador Árduo</strong>
+        <ul>
+            <li>Pode rerolar teste de força uma vez ao dia.</li>
+            <li>Começa com +2 Pontos de vida.</li>
+        </ul>
+    </div>
+</section>
 
 <section class="class-card">
     <header class="class-header">
