@@ -57,6 +57,12 @@ function loadHouses() {
     const content = document.getElementById("content");
     const template = document.getElementById("houses-template");
 
+    if (!template) {
+        content.innerHTML = "<h2>Erro ao carregar Casas.</h2>";
+        console.error("Template houses-template não encontrado.");
+        return;
+    }
+
     content.innerHTML = "";
     content.appendChild(template.content.cloneNode(true));
 }
