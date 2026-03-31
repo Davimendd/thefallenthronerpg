@@ -57,30 +57,23 @@ function loadHouses() {
     const content = document.getElementById("content");
     const template = document.getElementById("houses-template");
 
-    if (!template) {
-        content.innerHTML = "<p>Erro ao carregar Casas de Westeros.</p>";
-        return;
-    }
-
     content.innerHTML = "";
     content.appendChild(template.content.cloneNode(true));
 }
 
-function showHouses(type) {
-    document.querySelectorAll(".houses-section")
-        .forEach(section => section.classList.add("hidden"));
+function showHouses(type, event) {
+    document.querySelectorAll('.houses-section')
+        .forEach(sec => sec.classList.add('hidden'));
 
-    const target = document.getElementById(type);
-    if (target) target.classList.remove("hidden");
+    document.querySelectorAll('.houses-menu button')
+        .forEach(btn => btn.classList.remove('active'));
+
+    document.getElementById(type).classList.remove('hidden');
+
+    if (event) event.target.classList.add('active');
 }
 
+/* abrir página individual */
 function openHouse(house) {
-    const content = document.getElementById("content");
-
-    if (housePages[house]) {
-        content.innerHTML = housePages[house];
-        window.scrollTo(0, 0);
-    } else {
-        content.innerHTML = "<p>Casa não encontrada.</p>";
-    }
+    window.location.href = `houses/${house}.html`;
 }

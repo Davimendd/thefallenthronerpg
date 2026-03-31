@@ -47,9 +47,9 @@ stark: `
 
 lannister: `
 <section class="house-page">
-    <div class="house-hero" style="background-image:url('https://64.media.tumblr.com/f849903c9dfc20bb771b76f3e5c26e64/tumblr_inline_peg0tit2Gw1r0ewjx_1280.png')">
+    <div class="house-hero" style="background-image:url('https://i.pinimg.com/736x/1c/75/46/1c7546b104b692323030b737516c46ac.jpg')">
         <div class="overlay">
-            <img src="https://static.wikia.nocookie.net/sss/images/0/0a/Lannister.png/revision/latest?cb=20170809220120&path-prefix=pt-br">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNhpCKyoteqxSSYuK7EAjDlh6inI0pH2SO4Q&s">
             <h1>Casa Lannister</h1>
             <p>"Ouça-me Rugir"</p>
         </div>

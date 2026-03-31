@@ -52,123 +52,134 @@
 ========================= -->
 <template id="houses-template">
 
-<section id="casas-westeros">
-
-    <div class="houses-banner">
+    <!-- HERO -->
+    <div class="houses-hero">
         <h2>Casas de Westeros</h2>
     </div>
 
+    <!-- MENU -->
+    <nav class="houses-menu">
+        <button onclick="showHouses('grandes', event)" class="active">Grandes Casas</button>
+        <button onclick="showHouses('menores', event)">Casas Menores</button>
+        <button onclick="showHouses('extintas', event)">Casas Extintas</button>
+    </nav>
 
     <!-- GRANDES CASAS -->
     <section id="grandes" class="houses-section">
 
         <div class="houses-grid">
 
-    <!-- STARK -->
-    <div class="house-card">
-        <div class="house-banner" style="background-image: url('https://wikigameofthrones.wordpress.com/wp-content/uploads/2015/06/stark.jpg?w=300');"></div>
-        <div class="card">
-            <div class="house-header">
-                <img src="https://static.wikia.nocookie.net/gameofthrones/images/5/5a/Casa-Stark-escudo.png/revision/latest?cb=20230216112818&path-prefix=pt-br">
-                <h3>Casa Stark</h3>
+            <!-- STARK -->
+            <div class="house-card house-stark" onclick="openHouse('stark')">
+                <div class="house-banner" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWjAsAZcEYkrQEENdHn36uco_MSMK2xeAo2w&s')"></div>
+                <div class="house-content">
+                    <div class="house-header">
+                        <img src="https://static.wikia.nocookie.net/gelofogo/images/3/38/Casa_Stark.jpg/revision/latest?cb=20140601174943&path-prefix=pt-br">
+                        <h3>Casa Stark</h3>
+                    </div>
+                    <p><strong>Lema:</strong> O Inverno Está Chegando</p>
+                    <p><strong>Região:</strong> O Norte</p>
+                </div>
             </div>
-            <p>O Norte se lembra.</p>
-            <a href="stark.html" class="house-button">Ver Casa</a>
-        </div>
-    </div>
 
-    <!-- LANNISTER -->
-    <div class="house-card">
-        <div class="house-banner" style="background-image: url('https://upload.wikimedia.org/wikipedia/en/9/9e/House_Lannister_banner.png');"></div>
-        <div class="card">
-            <div class="house-header">
-                <img src="https://upload.wikimedia.org/wikipedia/en/9/9e/House_Lannister_banner.png">
-                <h3>Casa Lannister</h3>
+            <!-- LANNISTER -->
+            <div class="house-card house-lannister" onclick="openHouse('lannister')">
+                <div class="house-banner" style="background-image:url('https://s.aficionados.com.br/imagens/lannister.jpg')"></div>
+                <div class="house-content">
+                    <div class="house-header">
+                        <img src="https://static.wikia.nocookie.net/gameofthrones/images/7/72/Casa_Lannister.png/revision/latest?cb=20150719062457&path-prefix=pt-br">
+                        <h3>Casa Lannister</h3>
+                    </div>
+                    <p><strong>Lema:</strong> Ouça-me Rugir</p>
+                    <p><strong>Região:</strong> Terras Ocidentais</p>
+                </div>
             </div>
-            <p>Ouça-me rugir.</p>
-            <a href="lannister.html" class="house-button">Ver Casa</a>
-        </div>
-    </div>
 
-    <!-- TARGARYEN -->
-    <div class="house-card">
-        <div class="house-banner" style="background-image: url('https://upload.wikimedia.org/wikipedia/en/9/9e/House_Lannister_banner.png');"></div>
-        <div class="card">
-            <div class="house-header">
-                <img src="https://upload.wikimedia.org/wikipedia/en/9/9e/House_Lannister_banner.png">
-                <h3>Casa Targaryen</h3>
+            <!-- TARGARYEN -->
+            <div class="house-card house-targaryen" onclick="openHouse('targaryen')">
+                <div class="house-banner" style="background-image:url('https://s.aficionados.com.br/imagens/targaryen.jpg')"></div>
+                <div class="house-content">
+                    <div class="house-header">
+                        <img src="https://seriemaniacos.tv/wp-content/uploads/2019/04/2.Brasao-Targaryen.jpg">
+                        <h3>Casa Targaryen</h3>
+                    </div>
+                    <p><strong>Lema:</strong> Fogo e Sangue</p>
+                    <p><strong>Região:</strong> Terras da Coroa</p>
+                </div>
             </div>
-            <p>Fogo e Sangue.</p>
-            <a href="targaryen.html" class="house-button">Ver Casa</a>
-        </div>
-    </div>
 
-
-    <!-- ARRYN -->
-    <div class="house-card">
-        <div class="house-banner" style="background-image: url('https://upload.wikimedia.org/wikipedia/en/9/9e/House_Lannister_banner.png');"></div>
-        <div class="card">
-            <div class="house-header">
-                <img src="https://upload.wikimedia.org/wikipedia/en/9/9e/House_Lannister_banner.png">
-                <h3>Casa Arryn</h3>
+            <!-- BARATHEON -->
+            <div class="house-card house-baratheon" onclick="openHouse('baratheon')">
+                <div class="house-banner" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/2/2c/Baratheon_Flag.jpg')"></div>
+                <div class="house-content">
+                    <div class="house-header">
+                        <img src="https://thumbs.dreamstime.com/b/game-thrones-vector-icon-house-baratheon-image-banner-tv-series-92547059.jpg">
+                        <h3>Casa Baratheon</h3>
+                    </div>
+                    <p><strong>Lema:</strong> Nossa é a Fúria</p>
+                    <p><strong>Região:</strong> Terras da Tempestade</p>
+                </div>
             </div>
-            <p>Tão Alto Como a Honra.</p>
-            <a href="arryn.html" class="house-button">Ver Casa</a>
-        </div>
-    </div>
 
-
-    <!-- BARATHEON -->
-    <div class="house-card">
-        <div class="house-banner" style="background-image: url('https://upload.wikimedia.org/wikipedia/en/9/9e/House_Lannister_banner.png');"></div>
-        <div class="card">
-            <div class="house-header">
-                <img src="https://upload.wikimedia.org/wikipedia/en/9/9e/House_Lannister_banner.png">
-                <h3>Casa Baratheon</h3>
+            <!-- TYRELL -->
+            <div class="house-card house-tyrell" onclick="openHouse('tyrell')">
+                <div class="house-banner" style="background-image:url('https://images-cdn.fantasyflightgames.com/filer_public/04/e8/04e800fb-4ff5-4d91-b749-7cd092f092fc/uhbo15tyrell.png')"></div>
+                <div class="house-content">
+                    <div class="house-header">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoJ-XERs086dS8WobF45IuBQwGmBnlhIQ1-w&s">
+                        <h3>Casa Tyrell</h3>
+                    </div>
+                    <p><strong>Lema:</strong> Crescendo Fortes</p>
+                    <p><strong>Região:</strong> Campina</p>
+                </div>
             </div>
-            <p>Nossa é a Fúria.</p>
-            <a href="baratheon.html" class="house-button">Ver Casa</a>
-        </div>
-    </div>
 
-
-
-    <!-- TYRELL -->
-    <div class="house-card">
-        <div class="house-banner" style="background-image: url('https://upload.wikimedia.org/wikipedia/en/9/9e/House_Lannister_banner.png');"></div>
-        <div class="card">
-            <div class="house-header">
-                <img src="https://upload.wikimedia.org/wikipedia/en/9/9e/House_Lannister_banner.png">
-                <h3>Casa Tyrell</h3>
+            <!-- ARRYN -->
+            <div class="house-card house-arryn" onclick="openHouse('arryn')">
+                <div class="house-banner" style="background-image:url('https://i.pinimg.com/736x/fc/e4/d2/fce4d27e3c135f02e6c0183aa10c03f2.jpg')"></div>
+                <div class="house-content">
+                    <div class="house-header">
+                        <img src="https://static.wikia.nocookie.net/gameofthrones/images/3/3b/Casa_Arryn.png/revision/latest?cb=20151104181628&path-prefix=pt-br">
+                        <h3>Casa Arryn</h3>
+                    </div>
+                    <p><strong>Lema:</strong> Tão Alto Quanto a Honra</p>
+                    <p><strong>Região:</strong> Vale</p>
+                </div>
             </div>
-            <p>Crescendo Fortes.</p>
-            <a href="tyrell.html" class="house-button">Ver Casa</a>
-        </div>
-    </div>
 
-
-
-</div>
+            <!-- MARTELL -->
+            <div class="house-card house-martell" onclick="openHouse('martell')">
+                <div class="house-banner" style="background-image:url('https://i.imgur.com/5WcZVJH.jpg')"></div>
+                <div class="house-content">
+                    <div class="house-header">
+                        <img src="https://i.imgur.com/T9qKJbM.png">
+                        <h3>Casa Martell</h3>
+                    </div>
+                    <p><strong>Lema:</strong> Insubmissos, Não Curvados, Não Quebrados</p>
+                    <p><strong>Região:</strong> Dorne</p>
+                </div>
+            </div>
 
         </div>
     </section>
 
-    <!-- CASAS MENORES -->
+    <!-- MENORES -->
     <section id="menores" class="houses-section hidden">
-        <p>Casas extintas serão listadas aqui.</p>
+        <div class="card">Casas menores em desenvolvimento...</div>
     </section>
 
-    <!-- CASAS EXTINTAS -->
+    <!-- EXTINTAS -->
     <section id="extintas" class="houses-section hidden">
-        <ul>
-            <li>Casa Blackfyre;</li>
-            <li>Casa Frey;</li>
-            <li>Casa Tully;</li>
-            <li>Casa Martell;</li>
-        </ul>
+        <div class="card">
+            <ul>
+                <li>Casa Greyjoy</li>
+                <li>Casa Martell</li>
+                <li>Casa Frey</li>
+                <li>Casa Reyne</li>
+            </ul>
+        </div>
     </section>
 
-</section>
 </template>
 
 <!-- JS -->

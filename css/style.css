@@ -478,6 +478,141 @@ p, li {
   box-shadow: 0 12px 30px rgba(0,0,0,0.6);
 }
 
+.market-grid {
+    background-image: url('https://images.stockcake.com/public/2/4/9/249e1dc8-7c55-45b2-ab9f-3e9a58b3bdb7_large/medieval-market-scene-stockcake.jpg');
+    background-size: cover;
+    padding: 20px;
+    border-radius: 12px;
+}
 
+body {
+    background-image: url('https://www.muddycolors.com/wp-content/uploads/2023/03/ASoIaF-Daenerys-donato-1400.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
 
+.section-banner {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 14px;
+    margin-bottom: 25px;
+    position: relative;
+}
 
+.banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8));
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.banner-overlay h2 {
+    margin: 0;
+    color: #fff;
+}
+
+/* HERO */
+.houses-hero {
+    height: 220px;
+    background: url('https://s.aficionados.com.br/imagens/casas-tradicionais-game-of-thrones_f.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: 0 0 15px black;
+    margin-bottom: 20px;
+}
+
+/* MENU */
+.houses-menu {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.houses-menu button {
+    flex: 1;
+    padding: 10px;
+    background: #1a140d;
+    border: 1px solid #8b6f3d;
+    color: #e6d3a3;
+    cursor: pointer;
+}
+
+.houses-menu button.active {
+    background: #8b0000;
+}
+
+/* GRID */
+.houses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* CARD */
+.house-card {
+    background: #1a140d;
+    border: 1px solid #8b6f3d;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.house-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.9);
+}
+
+/* BANNER */
+.house-banner {
+    height: 140px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.house-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent, #1a140d);
+}
+
+/* CONTENT */
+.house-content {
+    padding: 15px;
+    margin-top: -25px;
+}
+
+/* HEADER */
+.house-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.house-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #c9aa71;
+    background: black;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .houses-menu {
+        flex-direction: column;
+    }
+
+    .house-banner {
+        height: 100px;
+    }
+}
