@@ -616,3 +616,82 @@ body {
         height: 100px;
     }
 }
+
+/* =========================
+   PLAYER / FICHA
+========================= */
+
+.player-card {
+    background: linear-gradient(180deg, #2a2418, #1a140d);
+    border: 2px solid #8b6f3d;
+    padding: 25px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+}
+
+.player-header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.player-header h3 {
+    color: #c9aa71;
+    margin: 0;
+}
+
+.player-stats {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+/* XP BAR */
+.xp-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.xp-bar-bg {
+    width: 100%;
+    height: 18px;
+    background: #111;
+    border: 1px solid #8b6f3d;
+}
+
+.xp-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #8b0000, #c9aa71);
+    transition: width 0.3s;
+}
+
+/* BOTÕES */
+.player-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.player-actions button {
+    background: #2b1d12;
+    border: 1px solid #8b6a3e;
+    color: #e6d3a3;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.player-actions button:hover {
+    background: #3a2718;
+}
+
+#btn-reset {
+    background: #3a0f0f;
+    border: 1px solid #8b0000;
+    color: #ffb3b3;
+}
+
+#btn-reset:hover {
+    background: #5a1a1a;
+}

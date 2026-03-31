@@ -33,7 +33,7 @@ As grandes terras que moldam o destino dos Sete Reinos. Cada região possui cult
   <div class="region-card">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCY0nvea_FtATaYwqdOscOTj6TmifD5INpkg&s" alt="Terras da Coroa">
     <h3>Terras da Coroa</h3>
-    <p>Centro político dos Sete Reinos, onde fica Porto Real e o Trono de Ferro.</p>
+    <p>Centro político dos Sete Reinos, onde fica Porto Real e o Trono de Ferro. Sob domínio da Casa Targaryen.</p>
   </div>
 
   <div class="region-card">
@@ -45,13 +45,19 @@ As grandes terras que moldam o destino dos Sete Reinos. Cada região possui cult
   <div class="region-card">
     <img src="https://preview.redd.it/what-your-thoughts-about-dorne-v0-d50cjzysapsd1.jpeg?auto=webp&s=f55d4f3b8782a869717018ee4fe22d57c34caea2" alt="Dorne">
     <h3>Dorne</h3>
-    <p>Terras quentes e independentes, com cultura e costumes únicos.</p>
+    <p>Terras quentes e independentes, com cultura e costumes únicos. Sob domínio da Casa Targaryen.</p>
   </div>
 
   <div class="region-card">
     <img src="https://preview.redd.it/i-made-the-iron-islands-from-game-of-thrones-in-far-cry-5-v0-t1rbt9smfw581.jpg?auto=webp&s=18dbc3cb1d0f3765bc44b1a25191d947780c0061" alt="Ilhas de Ferro">
     <h3>Ilhas de Ferro</h3>
-    <p>Lar de saqueadores e navegadores ferozes que seguem o Deus Afogado.</p>
+    <p>Lar de saqueadores e navegadores ferozes que seguem o Deus Afogado. Sob domínio da Casa Targaryen.</p>
+  </div>
+
+  <div class="region-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF9TnI0hRBaObciOAcfKO3SH5u7LJf8dPvwA&s" alt="Terras da Tempestade">
+    <h3>Terras da Tempestade</h3>
+    <p>Conhecidas pelo clima severo, florestas densas e cultura guerreira, governadas pela Casa Baratheon.</p>
   </div>
 
 </div>

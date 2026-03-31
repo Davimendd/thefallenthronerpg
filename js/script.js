@@ -1,3 +1,7 @@
+window.onerror = function(msg, url, line) {
+    alert("ERRO: " + msg + " linha: " + line);
+};
+
 function loadSection(section) {
     const content = document.getElementById("content");
 
@@ -38,6 +42,17 @@ function loadSection(section) {
         case "houses":
             loadHouses();
             break;
+
+        case "player":
+            content.innerHTML = playerContent;
+
+            setTimeout(() => {
+            carregarPlayer();
+            atualizarFicha();
+            bindPlayerEvents();
+         }, 100);
+
+        break;
 
         default:
             content.innerHTML = "<h2>Seção em construção</h2>";
